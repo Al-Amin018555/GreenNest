@@ -5,7 +5,7 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div className="text-5xl bg-purple-200">Hello firebase</div>,
+    element: <div className="text-5xl bg-purple-200">Hello netlify</div>,
   },
 ]);
 
