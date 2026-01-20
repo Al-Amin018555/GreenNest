@@ -17,7 +17,7 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <div>
+                        <div className="font-semibold text-[#609349]">
                             {links}
 
                         </div>
@@ -32,6 +32,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <div className="flex font-semibold text-[#609349]">
                         {links}
+
                     </div>
                 </ul>
             </div>

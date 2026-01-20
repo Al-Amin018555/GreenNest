@@ -1,0 +1,74 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy indoor plant that improves air quality and survives in low light conditions.",
+    "image": "https://i.ibb.co.com/FbvPtNF6/snake-plant.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 22,
+    "rating": 4.6,
+    "availableStock": 8,
+    "careLevel": "Medium",
+    "description": "An elegant plant with white blooms that helps remove indoor toxins.",
+    "image": "https://i.ibb.co.com/whF9bcBB/peace-lily.jpg",
+    "providerName": "GreenLeaf Nursery"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Aloe Vera",
+    "category": "Medicinal",
+    "price": 15,
+    "rating": 4.7,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "A succulent plant known for its healing gel and low maintenance needs.",
+    "image": "https://i.ibb.co.com/bMyk8mxZ/aloevera.jpg",
+    "providerName": "Healthy Roots"
+  },
+  {
+    "plantId": 4,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 16,
+    "rating": 4.5,
+    "availableStock": 15,
+    "careLevel": "Easy",
+    "description": "A fast-growing plant that removes harmful pollutants from indoor air.",
+    "image": "https://i.ibb.co.com/dJgXXRqH/spider-plant.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Monstera Deliciosa",
+    "category": "Decorative",
+    "price": 30,
+    "rating": 4.9,
+    "availableStock": 5,
+    "careLevel": "Medium",
+    "description": "A popular decorative plant with large, glossy leaves for modern interiors.",
+    "image": "https://i.ibb.co.com/WvTzKqpq/monstera.jpg",
+    "providerName": "Plantify Hub"
+  },
+  {
+    "plantId": 6,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 20,
+    "rating": 4.7,
+    "availableStock": 9,
+    "careLevel": "Easy",
+    "description": "A drought-tolerant plant that grows well in low-light environments.",
+    "image": "https://i.ibb.co.com/Ng9h9mV2/zz.jpg",
+    "providerName": "GreenLeaf Nursery"
+  }
+]
