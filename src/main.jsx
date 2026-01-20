@@ -2,10 +2,11 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import "./index.css";
+import Root from "./Root/Root";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div className="text-5xl bg-purple-200">Hello netlify</div>,
+    element: <Root></Root>,
   },
 ]);
 
