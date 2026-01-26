@@ -1,0 +1,34 @@
+[
+  {
+    "expertId": 1,
+    "name": "Ayesha Rahman",
+    "specialization": "Indoor Plant Care Specialist",
+    "experience": "8+ years",
+    "image": "https://i.ibb.co/plant-expert-1.jpg",
+    "bio": "Passionate about helping people grow healthy indoor plants with simple, practical care tips."
+  },
+  {
+    "expertId": 2,
+    "name": "Imran Hossain",
+    "specialization": "Succulent & Cactus Expert",
+    "experience": "6+ years",
+    "image": "https://i.ibb.co/plant-expert-2.jpg",
+    "bio": "Specializes in low-maintenance plants and drought-resistant indoor gardening."
+  },
+  {
+    "expertId": 3,
+    "name": "Nusrat Jahan",
+    "specialization": "Herbal & Medicinal Plants",
+    "experience": "10+ years",
+    "image": "https://i.ibb.co/plant-expert-3.jpg",
+    "bio": "Focuses on growing medicinal and herbal plants for healthy living at home."
+  },
+  {
+    "expertId": 4,
+    "name": "Tanvir Ahmed",
+    "specialization": "Urban Gardening Consultant",
+    "experience": "7+ years",
+    "image": "https://i.ibb.co/plant-expert-4.jpg",
+    "bio": "Helps urban households create green spaces in small apartments and balconies."
+  }
+]

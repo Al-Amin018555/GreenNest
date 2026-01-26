@@ -10,7 +10,7 @@ import { useLoaderData } from 'react-router';
 
 const PlantHeroSlider = () => {
 
-  const plants = useLoaderData();
+  const {plants} = useLoaderData();
   
   // Nature-inspired slogans based on categories
   const slogans = {

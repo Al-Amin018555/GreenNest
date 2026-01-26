@@ -1,0 +1,34 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Monstera Deliciosa",
+    "price": 38,
+    "rating": 4.9,
+    "image": "https://i.ibb.co.com/ccBh2WtD/monstera-big.jpg",
+    "shortDescription": "A stylish indoor plant with large tropical leaves, perfect for modern homes."
+  },
+  {
+    "plantId": 2,
+    "plantName": "Snake Plant",
+    "price": 20,
+    "rating": 4.8,
+    "image": "https://i.ibb.co.com/TBQ6bM9m/6-Laurentii-snake-scaled-1-scaled-scaled.jpg",
+    "shortDescription": "Low-maintenance air-purifying plant ideal for bedrooms and offices."
+  },
+  {
+    "plantId": 3,
+    "plantName": "Peace Lily",
+    "price": 24,
+    "rating": 4.7,
+    "image": "https://i.ibb.co.com/WWsKmhjp/lily.jpg",
+    "shortDescription": "Elegant flowering plant that boosts indoor air quality."
+  },
+  {
+    "plantId": 4,
+    "plantName": "Rubber Plant",
+    "price": 30,
+    "rating": 4.8,
+    "image": "https://i.ibb.co.com/svTJR3Jf/rubber.png",
+    "shortDescription": "Bold glossy leaves that add a premium feel to any interior space."
+  }
+]

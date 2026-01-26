@@ -11,11 +11,22 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
-        loader: () => fetch('plants.json'),
-      }
+        loader: async () => {
+          const plantsRes = fetch('plants.json');
+          const topRatedRes = fetch('toprated.json');
+
+          const [plants, topRated] = await Promise.all([
+            plantsRes.then(res => res.json()),
+            topRatedRes.then(res => res.json()),
+          ])
+
+          return { plants, topRated };
+        },
+        Component: Home,
+      },
     ],
   },
+
 ]);
 
 const root = document.getElementById("root");
