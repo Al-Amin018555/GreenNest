@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router";
-import Home from "../Home";
-import Root from "../../../Root/Root";
-import ErrorElement from "../../../components/ErrorElement/ErrorElement";
+import Home from "../Pages/Home/Home";
+import Root from "../Root/Root";
+import ErrorElement from "../components/ErrorElement/ErrorElement";
+import Login from "../Pages/Login/Login";
 
 const router = createBrowserRouter([
     {
@@ -30,8 +31,17 @@ const router = createBrowserRouter([
                 },
                 errorElement: <div>Error loading home page data.</div>,
             },
+            {
+                path: "login",
+                element: <Login></Login>,
+                errorElement: <ErrorElement></ErrorElement>,
+            }
+
+
+
         ],
     },
+
 
 ]);
 
