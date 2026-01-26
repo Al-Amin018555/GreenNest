@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
 
-const Login = () => {
+const Register = () => {
     const { register, handleSubmit, formState: { errors },
     } = useForm()
 
@@ -11,7 +11,7 @@ const Login = () => {
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-5xl font-bold">Register now!</h1>
                         <p className="py-6">
                             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                             quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -20,6 +20,18 @@ const Login = () => {
                     <form onSubmit={handleSubmit(onSubmit)} className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div className="card-body">
                             <fieldset className="fieldset">
+
+                                <label className="label">Name</label>
+                                <input
+                                    type="text"
+                                    className="input"
+                                    placeholder="Name"
+                                    name="name"
+                                    {...register("name", { required: true })}
+                                />
+
+                                {errors.name && <span className="text-red-600">This field is required</span>}
+
                                 <label className="label">Email</label>
 
                                 <input
@@ -32,6 +44,19 @@ const Login = () => {
 
                                 {errors.email && <span className="text-red-600">This field is required</span>}
 
+                                <label className="label">Photo URL</label>
+
+                                <input
+                                    type="text"
+                                    className="input"
+                                    placeholder="Photo"
+                                    name="photo"
+                                    {...register("photo")}
+                                />
+
+                                {errors.photo && <span className="text-red-600">This field is required</span>}
+
+
                                 <label className="label">Password</label>
                                 <input
                                     type="password"
@@ -40,11 +65,12 @@ const Login = () => {
                                     name="password"
                                     {...register("password", { required: true })} />
                                 {errors.password && <span className="text-red-600">This field is required</span>}
+
                                 <div className="flex">
-                                    <p>Forgot password?</p>
-                                    <Link to='/register' className="link text-blue-500 link-hover">Register</Link>
+                                    <p>Alread have an account?</p>
+                                    <Link to='/login' className="link text-blue-500 link-hover">Login</Link>
                                 </div>
-                                <button className="btn btn-neutral mt-4">Login</button>
+                                <button className="btn btn-neutral mt-4">Register</button>
                             </fieldset>
                         </div>
                     </form>
@@ -54,4 +80,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

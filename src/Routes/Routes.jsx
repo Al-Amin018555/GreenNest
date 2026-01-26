@@ -3,6 +3,7 @@ import Home from "../Pages/Home/Home";
 import Root from "../Root/Root";
 import ErrorElement from "../components/ErrorElement/ErrorElement";
 import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login></Login>,
+                errorElement: <ErrorElement></ErrorElement>,
+            },
+            {
+                path: "register",
+                element: <Register></Register>,
                 errorElement: <ErrorElement></ErrorElement>,
             }
 

@@ -23,7 +23,7 @@ const Navbar = () => {
                         </div>
                     </ul>
                 </div>
-                <Link to='/faaf' className="flex gap-1 items-center">
+                <Link to='/' className="flex gap-1 items-center">
                     <img src={logo} className="w-12.5 rounded-2xl" alt="" />
                     <p className="text-xl"> <span className="font-semibold text-[#144100]">Green</span><span className="font-semibold text-[#609349]">Nest</span> </p>
                 </Link>
@@ -55,6 +55,7 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li><Link to='/login'>Login</Link></li>
+                        <li><Link to='/register'>Register</Link></li>
                         <li><a>Logout</a></li>
                     </ul>
                 </div>
