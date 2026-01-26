@@ -1,6 +1,7 @@
 [
   {
     "tipId": 1,
+    "image": "https://i.ibb.co.com/FQQwQ30/watering.jpg",
     "title": "Watering Wisely",
     "category": "Watering",
     "description": "Water indoor plants only when the top inch of soil feels dry. Overwatering can cause root rot.",
@@ -8,6 +9,7 @@
   },
   {
     "tipId": 2,
+    "image": "https://i.ibb.co.com/xtmTGHhv/sunlight.jpg",
     "title": "Right Amount of Sunlight",
     "category": "Sunlight",
     "description": "Most indoor plants prefer bright, indirect sunlight. Avoid placing them under harsh direct sun.",
@@ -15,6 +17,7 @@
   },
   {
     "tipId": 3,
+    "image": "https://i.ibb.co.com/yF2Fh7jY/fertilisers.jpg",
     "title": "Fertilize During Growth",
     "category": "Fertilizing",
     "description": "Feed your plants with liquid fertilizer every 2–4 weeks during spring and summer.",
@@ -22,6 +25,7 @@
   },
   {
     "tipId": 4,
+    "image": "https://i.ibb.co.com/V6WMcby/know-yourplant.jpg",
     "title": "Know Your Plant",
     "category": "General Care",
     "description": "Different plants have different care needs. Always check plant-specific requirements.",

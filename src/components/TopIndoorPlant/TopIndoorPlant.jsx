@@ -4,7 +4,7 @@ const   TopIndoorPlant = ({ plant }) => {
         <div className="my-4 lg:my-10">
             <div className="card bg-base-100 shadow-sm">
                 <figure>
-                    <img className="max-h-50 max-w-50 w-full object-contain  rounded-lg p-2"
+                    <img className="max-h-50 max-w-50 w-full object-contain rounded-lg p-2"
                         src={image}
                         alt={plantName} />      
                 </figure>
