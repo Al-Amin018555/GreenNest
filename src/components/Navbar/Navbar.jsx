@@ -1,11 +1,17 @@
 import { Link, NavLink } from "react-router";
 import logo from '../../assets/logo.png'
-
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/plants'>Plants</NavLink></li>
         <li><NavLink to='/profile'>My Profile</NavLink></li>
+        {
+            user &&
+            <li><NavLink to='/plant-details'>Plant Details</NavLink></li>
+        }
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -37,6 +43,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                {
+                    user && <div className="mr-4"> {user.email} </div>
+                }
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
@@ -45,6 +54,7 @@ const Navbar = () => {
                                 src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                     </div>
+
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
@@ -56,7 +66,7 @@ const Navbar = () => {
                         </li>
                         <li><Link to='/login'>Login</Link></li>
                         <li><Link to='/register'>Register</Link></li>
-                        <li><a>Logout</a></li>
+                        <li><p onClick={() => logOut()}>Logout</p></li>
                     </ul>
                 </div>
             </div>

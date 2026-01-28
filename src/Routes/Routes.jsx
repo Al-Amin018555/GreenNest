@@ -4,6 +4,8 @@ import Root from "../Root/Root";
 import ErrorElement from "../components/ErrorElement/ErrorElement";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import PlantDetails from "../Pages/PlantDetails/PlantDetails";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +43,12 @@ const router = createBrowserRouter([
                 path: "register",
                 element: <Register></Register>,
                 errorElement: <ErrorElement></ErrorElement>,
+            },
+            {
+                path: "plant-details",
+                element: <ProtectedRoute>
+                    <PlantDetails></PlantDetails>
+                </ProtectedRoute>
             }
 
 

@@ -4,14 +4,14 @@ import { Link } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
-    const { login } = useContext(AuthContext);
+    const { login, setUser } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors },
     } = useForm()
 
     const onSubmit = (data) => {
         const { email, password } = data;
         login(email, password)
-            .then(result => console.log(result.user))
+            .then(result => setUser(result.user))
             .catch(error => console.log(error));
     };
     return (
