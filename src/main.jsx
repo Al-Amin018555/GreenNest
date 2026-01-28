@@ -2,8 +2,11 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router/dom";
 import "./index.css";
 import router from "./Routes/Routes.jsx";
+import FirebaseProvider from "./FirebaseProvider/FirebaseProvider.jsx";
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
-  <RouterProvider router={router} />,
+  <FirebaseProvider>
+    <RouterProvider router={router} />
+  </FirebaseProvider>
 );
