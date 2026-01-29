@@ -48,7 +48,8 @@ const router = createBrowserRouter([
                 path: "plant-details",
                 element: <ProtectedRoute>
                     <PlantDetails></PlantDetails>
-                </ProtectedRoute>
+                </ProtectedRoute>,
+                loader: async () => await fetch('plantDetails.json'),
             }
 
 

@@ -27,7 +27,7 @@ const FirebaseProvider = ({ children }) => {
     useEffect(() => {
         onAuthStateChanged(auth, currentUser => {
             if (currentUser) {
-                console.log(currentUser)
+                // console.log(currentUser)
                 setUser(currentUser)
             }
         })
