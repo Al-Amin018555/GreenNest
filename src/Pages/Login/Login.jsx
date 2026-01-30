@@ -16,8 +16,12 @@ const Login = () => {
         const { email, password } = data;
         login(email, password)
             .then(result => {
+                console.log(result.user)
                 setUser(result.user.email)
-                navigate(location.state)
+                {
+                    location.state ?  navigate(location.state) : navigate('/')
+                }
+               
 
             })
             .catch(error => console.log(error));

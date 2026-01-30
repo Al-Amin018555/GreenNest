@@ -5,14 +5,18 @@ import { useContext } from "react";
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser,profileUpdate } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors },
     } = useForm()
 
     const onSubmit = (data) => {
         console.log(data);
-        const { email, password } = data;
+        const { email, password,name,photo } = data;
         createUser(email, password)
+        .then( () => {
+            console.log("user successfully created");
+            profileUpdate(name,photo)
+        })
       
 
     };
