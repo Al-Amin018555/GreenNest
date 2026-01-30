@@ -8,7 +8,7 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const { login, setUser, googleLogin,profileUpdate } = useContext(AuthContext);
+    const { login, setUser, googleLogin, profileUpdate } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors },
     } = useForm()
 
@@ -30,11 +30,14 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         googleLogin()
-        .then((result)=> {
-            const user = result.user
-            setUser(user)
-            profileUpdate(user.displayName,user.photoURL)
-        })
+            .then((result) => {
+                const user = result.user
+                setUser(user)
+                profileUpdate(user.displayName, user.photoURL)
+                {
+                    location.state ? navigate(location.state) : navigate('/')
+                }
+            })
     }
     return (
         <div className="min-h-screen">
