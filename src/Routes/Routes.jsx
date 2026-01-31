@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import PlantDetails from "../Pages/PlantDetails/PlantDetails";
+import Profile from "../Pages/Profile/Profile";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
                     return { plants, topRated, plantCare, greenExpert };
                 },
                 errorElement: <div>Error loading home page data.</div>,
+            },
+            {
+                path: "profile",
+                element: <Profile></Profile>
             },
             {
                 path: "login",

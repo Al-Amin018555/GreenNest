@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png'
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut,setUser } = useContext(AuthContext);
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/plants'>Plants</NavLink></li>
@@ -65,7 +65,10 @@ const Navbar = () => {
                                     <p className="font-bold">{user.displayName}</p>
                                 </li>
 
-                                <li><p onClick={() => logOut()}>Logout</p></li>
+                                <li><p onClick={() => {
+                                    logOut()
+                                    setUser(null)
+                                    }}>Logout</p></li>
 
                             </> : <>
 
