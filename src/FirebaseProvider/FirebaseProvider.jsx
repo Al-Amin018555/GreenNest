@@ -40,6 +40,9 @@ const FirebaseProvider = ({ children }) => {
                 // console.log(currentUser)
                 setUser(currentUser)
             }
+            else{
+                setUser(null)
+            }
         })
     }, [user])
     return (
