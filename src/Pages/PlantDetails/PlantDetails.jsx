@@ -21,8 +21,8 @@ const PlantDetails = () => {
                     plants.map(plant => <PlantDetailsCard plant={plant} key={plant.id}></PlantDetailsCard>)
                 }
             </div>
-            <div className="">
-                <div className="my-2 md:my-6 lg:my-10 flex flex-col lg:flex-row items-center gap-3 lg:gap-6 bg-[#E7F0DF] p-4 lg:p-10">
+            <div className="bg-[#6f9349] text-white font-semibold">
+                <div className="my-2 md:my-6 lg:my-10 flex flex-col lg:flex-row items-center gap-3 lg:gap-6 p-4 lg:p-10">
                     <div className="lg:w-[50%] hidden lg:flex">
                         <img src={consultationImg} className="rounded-lg" alt="consultation image" />
                     </div>
@@ -32,30 +32,30 @@ const PlantDetails = () => {
                             <div className="card-body">
                                 <fieldset className="fieldset">
 
-                                    <label className="label">Name</label>
+                                    <label className="label text-white">Name</label>
                                     <input
                                         type="text"
-                                        className="input w-full outline-0 bg-[#E7F0DF]"
-                                        placeholder="Name"
+                                        className="input w-full outline-0 placeholder:text-black bg-[#E7F0DF]"
+                                        placeholder="Please enter your name here.."
                                         name="name"
                                         {...register("name", { required: true })}
                                     />
 
                                     {errors.name && <span className="text-red-600">This field is required</span>}
 
-                                    <label className="label">Email</label>
+                                    <label className="label text-white">Email</label>
 
                                     <input
                                         type="email"
-                                        className="input outline-0 bg-[#E7F0DF] w-full"
-                                        placeholder="Email"
+                                        className="input outline-0  bg-[#E7F0DF] placeholder:text-black w-full"
+                                        placeholder="Please enter your email here.."
                                         name="email"
                                         {...register("email", { required: true })}
                                     />
 
                                     {errors.email && <span className="text-red-600">This field is required</span>}
 
-                                    <button className="btn btn-neutral mt-4">Book Now</button>
+                                    <button className="btn btn-soft text-black  btn-success mt-4">Book Now</button>
                                 </fieldset>
                             </div>
                         </form>

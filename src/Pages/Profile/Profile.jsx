@@ -13,13 +13,10 @@ const Profile = () => {
 
     return (
         <div className="min-h-[calc(100vh-288px)] flex justify-center items-center max-w-9/12 md:max-w-8/12 lg:max-w-4/12 mx-auto mt-2 md:mt-6 lg:mt-20">
-            <div className="card w-full my-4 bg-base-100 shadow-sm">
+            <div className="card w-full p-6 my-4 bg-[#749349] text-white font-semibold shadow-sm">
                 <div className="">
                     <figure>
                         {
-                            // user && <img
-                            //     src={user.photoURL}
-                            //     alt={user.displayName} />
                             user && <div className="avatar">
                                 <div className="w-24 rounded-full">
                                     <img src={user.photoURL} />

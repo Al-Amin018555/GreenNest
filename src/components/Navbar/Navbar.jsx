@@ -14,7 +14,7 @@ const Navbar = () => {
         }
     </>
     return (
-        <div className="navbar sticky top-0 z-20 bg-base-100 shadow-sm">
+        <div className="navbar sticky top-0 z-20 bg-[#6f9349] text-white font-semibold shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,20 +22,20 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-20 mt-3 w-52 p-2 shadow">
-                        <div className="font-semibold text-[#609349]">
+                        className="menu menu-sm dropdown-content bg-[#609349] rounded-box z-20 mt-3 w-52 p-2 shadow">
+                        <div className="font-semibold">
                             {links}
                         </div>
                     </ul>
                 </div>
-                <Link to='/' className="flex gap-1 items-center">
+                <Link to='/' className="flex gap-2 items-center">
                     <img src={logo} className="w-12.5 rounded-2xl" alt="" />
-                    <p className="text-xl"> <span className="font-semibold text-[#144100]">Green</span><span className="font-semibold text-[#609349]">Nest</span> </p>
+                    <p className="text-xl"> <span>Green</span><span>Nest</span> </p>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <div className="flex font-semibold text-[#609349]">
+                    <div className="flex">
                         {links}
 
                     </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
 
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-20 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-[#609349] rounded-box z-20 mt-3 w-52 p-2 shadow">
                         {
                             user ? <>
                                 <li>
