@@ -8,6 +8,7 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import PlantDetails from "../Pages/PlantDetails/PlantDetails";
 import Profile from "../Pages/Profile/Profile";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
+import About from "../Pages/About/About";
 
 const router = createBrowserRouter([
     {
@@ -56,7 +57,11 @@ const router = createBrowserRouter([
                     <PlantDetails></PlantDetails>
                 </ProtectedRoute>,
                 loader: async () => await fetch('plantDetails.json'),
-            }
+            },
+            {
+                path:"about",
+                element: <About></About>
+            },
 
 
 
