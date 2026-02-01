@@ -15,7 +15,7 @@ const Login = () => {
         const { email, password } = data;
         login(email, password)
             .then(result => {
-                setUser(result.user.email)
+                setUser(result.user)
                 {
                     location.state ? navigate(location.state) : navigate('/')
                 }

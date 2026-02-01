@@ -8,7 +8,7 @@ const Profile = () => {
     const location = useLocation();
     console.log(location)
     console.log(user)
-    
+
     if(loading){
         return <LoadingSpinner></LoadingSpinner>;
     }
@@ -38,7 +38,7 @@ const Profile = () => {
                             {user && <p>{user.displayName}</p>}
 
                         </h2>
-                        {/* <p>{user.email}</p> */}
+                        <p>{user.email}</p>
 
                     </div>
                 </div>
