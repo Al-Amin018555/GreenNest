@@ -2,7 +2,7 @@ const About = () => {
     return (
         <div className="my-4 min-h-[calc(100vh-288px)] max-w-9/12 mx-auto">
 
-            <h2 className="text-3xl font-semibold text-[#144100] text-center mb-4">About</h2>
+           
             <div className="flex justify-center">
                 <figure className="hover-gallery max-w-9/12 max-h-75 object-cover">
                     <img src="https://i.ibb.co.com/0jQL1dFX/about1.jpg" />
@@ -15,11 +15,11 @@ const About = () => {
                 </figure>
             </div>
 
-            <p className="my-4 text-justify textarea-lg md:text-xl">GreenNest – Indoor Plant Care & Store is a modern online platform dedicated to bringing greenery into everyday living. We believe that plants are more than decoration—they improve well-being, enhance indoor spaces, and create a calming environment. GreenNest is built to help people discover, care for, and enjoy indoor plants with confidence and ease.</p>
+            <p className="my-4 text-justify text-xl">GreenNest – Indoor Plant Care & Store is a modern online platform dedicated to bringing greenery into everyday living. We believe that plants are more than decoration—they improve well-being, enhance indoor spaces, and create a calming environment. GreenNest is built to help people discover, care for, and enjoy indoor plants with confidence and ease.</p>
             <div className="text-justify my-4">
                 <h2 className="text-3xl font-semibold text-[#144100]">What We Offer</h2>
 
-                <p className="my-4 textarea-lg md:text-xl">At GreenNest, we provide a carefully curated selection of indoor plants along with detailed information to help users make informed decisions. Our platform offers:</p>
+                <p className="my-4 text-xl">At GreenNest, we provide a carefully curated selection of indoor plants along with detailed information to help users make informed decisions. Our platform offers:</p>
                 <ul className="space-y-2 text-[#609349] font-semibold">
                     <li>1. A wide variety of indoor plants for homes and offices</li>
                     <li>  Detailed plant descriptions with pricing, ratings, and availability</li>

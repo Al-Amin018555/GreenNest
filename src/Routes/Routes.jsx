@@ -9,6 +9,8 @@ import PlantDetails from "../Pages/PlantDetails/PlantDetails";
 import Profile from "../Pages/Profile/Profile";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 import About from "../Pages/About/About";
+import Contact from "../Pages/Contact/Contact";
+import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +38,7 @@ const router = createBrowserRouter([
                     return { plants, topRated, plantCare, greenExpert };
                 },
                 errorElement: <div>Error loading home page data.</div>,
+                hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>,
             },
             {
                 path: "profile",
@@ -62,6 +65,14 @@ const router = createBrowserRouter([
                 path:"about",
                 element: <About></About>
             },
+            {
+                path: "contact",
+                element:<Contact></Contact>
+            },
+            {
+                path:"privacy-policy",
+                element: <PrivacyPolicy></PrivacyPolicy>
+            }
 
 
 
