@@ -1,14 +1,22 @@
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { Navigate, useLocation } from "react-router";
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 
 const Profile = () => {
-    const { user } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
     const location = useLocation();
     console.log(location)
+    console.log(user)
+    
+    if(loading){
+        return <LoadingSpinner></LoadingSpinner>;
+    }
+
     if (!user) {
         return <Navigate to='/login' state={location.pathname}></Navigate>;
     }
+
 
 
     return (
@@ -30,8 +38,8 @@ const Profile = () => {
                             {user && <p>{user.displayName}</p>}
 
                         </h2>
-                        <p>{user.email}</p>
-                        
+                        {/* <p>{user.email}</p> */}
+
                     </div>
                 </div>
             </div>

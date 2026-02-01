@@ -7,13 +7,14 @@ import Register from "../Pages/Register/Register";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import PlantDetails from "../Pages/PlantDetails/PlantDetails";
 import Profile from "../Pages/Profile/Profile";
+import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
         errorElement: <ErrorElement></ErrorElement>,
-        hydrateFallbackElement: <div>Loading...</div>,
+        hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>,
         children: [
             {
                 path: "/",
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "profile",
-                element: <Profile></Profile>
+                element: <Profile></Profile>,
             },
             {
                 path: "login",

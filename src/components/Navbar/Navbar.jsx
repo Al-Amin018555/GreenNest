@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png'
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 const Navbar = () => {
-    const { user, logOut,setUser } = useContext(AuthContext);
+    const { user, logOut, setUser } = useContext(AuthContext);
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/plants'>Plants</NavLink></li>
@@ -61,14 +61,17 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-[#609349] rounded-box z-20 mt-3 w-52 p-2 shadow">
                         {
                             user ? <>
-                                <li>
+                            <li>
                                     <p className="font-bold">{user.displayName}</p>
                                 </li>
 
                                 <li><p onClick={() => {
                                     logOut()
-                                    setUser(null)
-                                    }}>Logout</p></li>
+                                        .then(() => {
+                                            setUser(null)
+                                        })
+                                        .catch((error) => console.log(error.message))
+                                }}>Logout</p></li>
 
                             </> : <>
 

@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
-
+    console.log(location);
     const { login, setUser, googleLogin, profileUpdate, passwordReset } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors }, getValues } = useForm()
 
