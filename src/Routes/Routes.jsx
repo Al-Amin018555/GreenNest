@@ -11,6 +11,7 @@ import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
+import Plants from "../Pages/Plants/Plants";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
                 },
                 errorElement: <div>Error loading home page data.</div>,
                 hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>,
+            },
+            {
+                path: "plants",
+                element: <Plants></Plants>,
+                loader: async () => await fetch("allplants.json"),
             },
             {
                 path: "profile",
