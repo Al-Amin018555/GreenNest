@@ -1,10 +1,12 @@
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const { createUser, profileUpdate, googleLogin, setUser } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors },
@@ -21,7 +23,7 @@ const Register = () => {
                 navigate('/')
             })
             .catch(error => {
-               toast.error(error.message);
+                toast.error(error.message);
             });
     };
     const handleGoogleLogin = () => {
@@ -85,32 +87,39 @@ const Register = () => {
 
 
                                 <label className="label">Password</label>
-                                <input
-                                    type="password"
-                                    className="input"
-                                    placeholder="Password"
-                                    name="password"
-                                    {...register("password", { 
-                                        required: "Password is required",
-                                        minLength: {
-                                            value: 6,
-                                            message: "Password must be at least 6 characters"
-                                        },
-                                        validate: (value) => {
-                                            if (!/^(?=.*[A-Z])/.test(value)) {
-                                                return "Password must contain at least one uppercase letter";
+                                <div className="relative">
+                                    <input
+                                        type={showPassword ? 'text' : 'password'}
+                                        className="input"
+                                        placeholder="Password"
+                                        name="password"
+                                        {...register("password", {
+                                            required: "Password is required",
+                                            minLength: {
+                                                value: 6,
+                                                message: "Password must be at least 6 characters"
+                                            },
+                                            validate: (value) => {
+                                                if (!/^(?=.*[A-Z])/.test(value)) {
+                                                    return "Password must contain at least one uppercase letter";
+                                                }
+                                                if (!/^(?=.*[a-z])/.test(value)) {
+                                                    return "Password must contain at least one lowercase letter";
+                                                }
+                                                if (!/^(?=.*[0-9])/.test(value)) {
+                                                    return "Password must contain at least one number";
+                                                }
+                                                return true;
                                             }
-                                            if (!/^(?=.*[a-z])/.test(value)) {
-                                                return "Password must contain at least one lowercase letter";
-                                            }
-                                            if (!/^(?=.*[0-9])/.test(value)) {
-                                                return "Password must contain at least one number";
-                                            }
-                                            return true;
+                                        })}
+                                    />
+                                    <button onClick={() => setShowPassword(!showPassword)} className="btn btn-xs absolute top-2 right-6">
+                                        {
+                                            showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                         }
-                                    })} 
-                                />
-                                {errors.password && <span className="text-red-600">{errors.password.message}</span>}
+                                    </button>
+                                    {errors.password && <span className="text-red-600">{errors.password.message}</span>}
+                                </div>
 
                                 <div className="flex">
                                     <p>Alread have an account?</p>

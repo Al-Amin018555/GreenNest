@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
     console.log(location);
     const { login, setUser, googleLogin, profileUpdate, passwordReset } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors }, getValues } = useForm()
@@ -82,13 +84,20 @@ const Login = () => {
                                 {errors.email && <span className="text-red-600">This field is required</span>}
 
                                 <label className="label">Password</label>
-                                <input
-                                    type="password"
-                                    className="input"
-                                    placeholder="Password"
-                                    name="password"
-                                    {...register("password", { required: true })} />
-                                {errors.password && <span className="text-red-600">This field is required</span>}
+                                <div className="relative">
+                                    <input
+                                        type={showPassword ? 'text' : 'password'}
+                                        className="input"
+                                        placeholder="Password"
+                                        name="password"
+                                        {...register("password", { required: true })} />
+                                    {errors.password && <span className="text-red-600">This field is required</span>}
+                                    <button className="btn btn-xs absolute top-2 right-6" onClick={() => setShowPassword(!showPassword)}>
+                                        {
+                                            showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                        }
+                                    </button>
+                                </div>
 
                                 <div className="flex">
                                     <p onClick={handleForgetPassword} className="cursor-pointer hover:text-blue-500 transition">Forgot password?</p>

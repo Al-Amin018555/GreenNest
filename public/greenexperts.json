@@ -2,7 +2,7 @@
   {
     "expertId": 1,
     "image": "https://i.ibb.co.com/cSQCkG2B/expert1.jpg",
-    "name": "Ayesha Rahman",
+    "name": "Luca Moretti",
     "specialization": "Indoor Plant Care Specialist",
     "experience": "8+ years",
     "bio": "Passionate about helping people grow healthy indoor plants with simple, practical care tips."
@@ -10,7 +10,7 @@
   {
     "expertId": 2,
     "image": "https://i.ibb.co.com/tMC1j4FL/expert2.jpg",
-    "name": "Imran Hossain",
+    "name": "Oliver Hartmann",
     "specialization": "Succulent & Cactus Expert",
     "experience": "6+ years",
     "bio": "Specializes in low-maintenance plants and drought-resistant indoor gardening."
@@ -18,7 +18,7 @@
   {
     "expertId": 3,
     "image": "https://i.ibb.co.com/5XprnfMS/expert3.jpg",
-    "name": "Nusrat Jahan",
+    "name": "Mateo Alvarez",
     "specialization": "Herbal & Medicinal Plants",
     "experience": "10+ years",
     "bio": "Focuses on growing medicinal and herbal plants for healthy living at home."
@@ -26,7 +26,7 @@
   {
     "expertId": 4,
     "image": "https://i.ibb.co.com/ccLLjFqX/tanvir1.jpg",
-    "name": "Tanvir Ahmed",
+    "name": "Julien Dubois",
     "specialization": "Urban Gardening Consultant",
     "experience": "7+ years",
     "bio": "Helps urban households create green spaces in small apartments and balconies."
