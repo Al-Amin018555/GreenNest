@@ -12,9 +12,7 @@ const   TopIndoorPlant = ({ plant }) => {
                     <h2 className="card-title textarea-xl">{plantName}</h2>
                     <p className="text-lg text-gray-700">Price: ${price}</p>
                     <p className="text-lg text-gray-700">Rating: {rating}</p>
-                    <div className="w-full mt-2">
-                        <button className="btn bg-[#6f9349] hover:bg-[#0b4f16]  text-white font-semibold w-full">View Details</button>
-                    </div>
+                  
                 </div>
             </div>
         </div>
